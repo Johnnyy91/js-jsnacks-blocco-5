@@ -89,3 +89,85 @@ console.log(rangeArray);
  * Dividi in due array separati le zucchine che misurano meno o più di 15cm.
  * Infine stampa separatamente quanto pesano i due gruppi di zucchine.
  */
+
+const zucchine = [
+
+    {
+        peso: 13,
+        lunghezza: 89,
+    },
+
+    {
+        peso: 3,
+        lunghezza: 8,
+    },
+
+    {
+        peso: 2,
+        lunghezza: 3,
+    },
+
+    {
+        peso: 5,
+        lunghezza: 6,
+    },
+
+    {
+        peso: 4,
+        lunghezza: 27,
+    },
+
+    {
+        peso: 34,
+        lunghezza: 12,
+    },
+
+    {
+        peso: 1,
+        lunghezza: 19,
+    },
+
+    {
+        peso: 99,
+        lunghezza: 99,
+    },
+
+    {
+        peso: 23,
+        lunghezza: 13,
+    },
+
+    {
+        peso: 1,
+        lunghezza: 10,
+    },
+]
+
+const zucchineGrandi = [];
+const zucchinePiccole = [];
+
+for (let i = 0; i < zucchine.length; i++) {
+    const lunghezzaZucchina = zucchine[i].lunghezza;
+    if (lunghezzaZucchina > 15) {
+        zucchineGrandi.push(zucchine[i]);
+    }
+
+    else {
+        zucchinePiccole.push(zucchine[i]);
+    }
+}
+
+
+let pesoZucchineGrandi = 0;
+let pesoZucchinePiccole = 0;
+
+zucchineGrandi.forEach(element => {
+    pesoZucchineGrandi += element.peso;
+});
+
+console.log(`Peso zucchine grandi ${pesoZucchineGrandi}`);
+
+zucchinePiccole.forEach(element => {
+    pesoZucchinePiccole += element.peso;
+});
+console.log(`Peso zucchine piccole ${pesoZucchinePiccole}`);
